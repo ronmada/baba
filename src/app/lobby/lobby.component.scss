@@ -1,0 +1,14 @@
+/*var --background-image inits in lobby.component.ts */
+
+.background-image {
+    // background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  //   height: 100vh;
+  background-attachment: fixed;
+}
+.just-image {
+  position: absolute;
+  z-index: -1;
+}

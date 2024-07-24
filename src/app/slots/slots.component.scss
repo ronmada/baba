@@ -1,0 +1,30 @@
+.main-slots {
+  display: grid;
+  justify-items: center;
+}
+.carousel {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.navigation-arrow {
+  cursor: pointer;
+}
+.bullets {
+  display: flex;
+}
+.slot-container {
+  position: relative;
+}
+.locked {
+  filter: grayscale(1);
+  opacity: 0.7;
+  pointer-events: none;
+}
+.locked-image {
+  position: absolute;
+  display: grid;
+  align-items: center;
+  inset: 0;
+}
