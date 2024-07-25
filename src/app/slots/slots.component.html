@@ -5,16 +5,25 @@
       src="/lobby/arrow-left.png"
       (click)="navigate('previous')"
     />
-    @for(slot of slots() | slice: start:end ; track slot.id){
     <div class="slot-container">
-      <img [class.locked]="slot.isLocked" [src]="slot.image" />
-      @if(slot.isLocked){
-      <div class="locked-image">
-        <img src="/lobby/lock.png" />
+      @for(slot of slots() | slice: start:end ; track slot.id){
+      <div class="slot-item">
+        <div class="jackpot">
+          @if(slot.jackpot) {
+          <app-jackpot [jackpot]="slot.jackpot"></app-jackpot>
+          }
+        </div>
+        <div class="slot-image">
+          <img [class.locked]="slot.isLocked" [src]="slot.image" />
+          @if(slot.isLocked) {
+          <div class="locked-image">
+            <img src="/lobby/lock.png" />
+          </div>
+          }
+        </div>
       </div>
       }
     </div>
-    }
     <img
       class="navigation-arrow"
       src="/lobby/arrow-right.png"

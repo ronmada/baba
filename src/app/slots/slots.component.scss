@@ -15,7 +15,14 @@
   display: flex;
 }
 .slot-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-flow: column;
+}
+.slot-image {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .locked {
   filter: grayscale(1);
@@ -27,4 +34,9 @@
   display: grid;
   align-items: center;
   inset: 0;
+}
+.slot-item {
+  display: grid;
+  grid-template-rows: minmax(34px, 1fr) auto;
+  justify-items: center;
 }

@@ -1,13 +1,14 @@
 import { Component, OnInit, input } from '@angular/core';
 import { Slot } from '../types';
 import { SlicePipe } from '@angular/common';
+import { JackpotComponent } from '../jackpot/jackpot.component';
 type Navigate = 'previous' | 'next';
 const MAX_SLOTS_AMOUNT = 4 as const;
 
 @Component({
   selector: 'app-slots',
   standalone: true,
-  imports: [SlicePipe],
+  imports: [SlicePipe, JackpotComponent],
   templateUrl: './slots.component.html',
   styleUrl: './slots.component.scss',
 })
