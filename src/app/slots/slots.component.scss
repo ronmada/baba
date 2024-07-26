@@ -18,6 +18,8 @@
   display: grid;
   grid-template-rows: 1fr;
   grid-auto-flow: column;
+  margin-inline: 1em;
+  gap: 1em;
 }
 .slot-image {
   position: relative;
@@ -39,4 +41,11 @@
   display: grid;
   grid-template-rows: minmax(34px, 1fr) auto;
   justify-items: center;
+}
+.clickable-image {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.2);
+  }
 }

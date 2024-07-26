@@ -6,7 +6,7 @@
       (click)="navigate('previous')"
     />
     <div class="slot-container">
-      @for(slot of slots() | slice: start:end ; track slot.id){
+      @for(slot of sortedSlots() | slice: start:end ; track slot.id){
       <div class="slot-item">
         <div class="jackpot">
           @if(slot.jackpot) {
@@ -14,7 +14,12 @@
           }
         </div>
         <div class="slot-image">
-          <img [class.locked]="slot.isLocked" [src]="slot.image" />
+          <img
+            class="clickable-image"
+            [class.locked]="slot.isLocked"
+            [src]="slot.image"
+            [routerLink]="['/slot/' + slot.id.toString()]"
+          />
           @if(slot.isLocked) {
           <div class="locked-image">
             <img src="/lobby/lock.png" />
@@ -22,6 +27,7 @@
           }
         </div>
       </div>
+
       }
     </div>
     <img
@@ -30,9 +36,8 @@
       (click)="navigate('next')"
     />
   </div>
-
   <div class="bullets">
-    @for(_ of [].constructor(getPages);track i ; let i =$index ){
+    @for(_ of [].constructor(getPages); track i ; let i = $index ){
     <img
       [src]="i === position ? '/lobby/bullet-on.png' : '/lobby/bullet-off.png'"
     />
