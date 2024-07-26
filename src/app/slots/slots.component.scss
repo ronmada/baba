@@ -1,10 +1,11 @@
 .main-slots {
   display: grid;
-  justify-items: center;
+  width: max-content;
 }
 .carousel {
   display: grid;
   grid-auto-flow: column;
+  grid-auto-columns: max-content;
   align-items: center;
 }
 
@@ -13,6 +14,7 @@
 }
 .bullets {
   display: flex;
+  margin: auto;
 }
 .slot-container {
   display: grid;
@@ -23,8 +25,6 @@
 }
 .slot-image {
   position: relative;
-  display: flex;
-  flex-direction: column;
 }
 .locked {
   filter: grayscale(1);
@@ -39,7 +39,7 @@
 }
 .slot-item {
   display: grid;
-  grid-template-rows: minmax(34px, 1fr) auto;
+  grid-template-rows: minmax(3.5rem, 1fr) auto;
   justify-items: center;
 }
 .clickable-image {

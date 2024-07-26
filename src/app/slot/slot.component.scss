@@ -1,0 +1,11 @@
+.slot-container {
+  position: relative;
+  & > * {
+    position: absolute;
+  }
+}
+.game {
+  background-image: url(/slot-1128/game_background.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
