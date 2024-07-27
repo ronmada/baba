@@ -2,12 +2,9 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
-  Input,
-  Signal,
   ViewChild,
   input,
 } from '@angular/core';
-import { Lobby } from '../types';
 @Component({
   selector: 'app-audio',
   standalone: true,

@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { AudioComponent } from '../audio/audio.component';
 import { Lobby } from '../types';
-import { SlotsComponent } from "../slots/slots.component";
+import { SlotsComponent } from '../slots/slots.component';
 const URL =
   'https://s3cdn.babawildslots.com/uploadImages/home-assignment-data.json';
 @Component({

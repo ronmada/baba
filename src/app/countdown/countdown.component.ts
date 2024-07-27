@@ -6,19 +6,14 @@ const INITIAL_TIME_IN_SECONDS = 3600; // Initial time in seconds (1 hour = 3600 
   standalone: true,
   styles: `
   div {
-    direction: rtl;
-    margin: 1em 1em 0 0;
-    position: relative;
-  }
-  span {
     position: absolute;
+    right: 0;
+    z-index: 1;
+    color: rgb(248, 58, 12);
+    top: 15.2rem; 
   }
-  `,
-  template: `
-    <div>
-      <span> {{ remainingTime }}</span>
-    </div>
-  `,
+`,
+  template: ` <div>{{ remainingTime }}</div> `,
 })
 export class CountdownComponent implements OnInit {
   private totalTimeInSeconds = INITIAL_TIME_IN_SECONDS;

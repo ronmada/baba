@@ -6,9 +6,10 @@ import { CountdownComponent } from './countdown/countdown.component';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, LobbyComponent, CountdownComponent],
+  styles: ` :host { display:contents; }`,
   template: `
-    <app-countdown />
-    <router-outlet />
+    <app-countdown style="display: contents;" />
+    <router-outlet style="display: contents;" />
   `,
 })
 export class AppComponent {}
